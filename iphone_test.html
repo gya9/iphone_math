@@ -58,7 +58,7 @@ var options = model_chosen.options;
 var model;
 for( var i=0 ; i<options.length ; i++ ){
   if( options[i].selected ){
-    model = parseFloat( options[i].value );
+    model = options[i].value;
   break;
   }
 }
@@ -69,7 +69,7 @@ var options = axis_chosen.options;
 var axis;
 for( var i=0 ; i<options.length ; i++ ){
   if( options[i].selected ){
-    axis = parseFloat( options[i].value );
+    axis = options[i].value;
   break;
   }
 }
