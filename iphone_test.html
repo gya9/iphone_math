@@ -27,7 +27,7 @@
 
   <!-------- テキストボックス -------->
   倍率<br>
-  <input type="text" name="myText" size="30"
+  <input type="number" name="myText" size="30"
   value="何個分?">
   <br><br>
 
@@ -77,10 +77,10 @@
   
   /*---- テキストボックスの値を取得 ----*/
   var myText = document.myForm.myText;
-  if( myText.value.match(/\D/) ){
-    alert("入力は数字にしてください");
-    return;
-  }
+  // if( myText.value.match(/\D/) ){
+  //   alert("入力は数字にしてください");
+  //   return;
+  // }
   
   var ratio = parseFloat(myText.value);
   
