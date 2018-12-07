@@ -18,11 +18,11 @@
   </select>
 
   <input type="text" name="ratio" size="30"
-  value="何個分?小数OK">
-</form>
+  value="何個分?小数OKaaa">
 
-<!-------- 計算ボタン -------->
-<input type="button" name="myButton" value="計算" onclick="setResult()">
+
+  <!-------- 計算ボタン -------->
+  <input type="button" name="myButton" value="計算" onclick="setResult()">
 </form>
 <br><br>
 
@@ -72,8 +72,7 @@ alert(model + axis + document.ratio.value)
 // = length
 // document.getElementById("ratio").innerHTML
 // = ratio
-document.getElementById("result").innerHTML
-= length * ratio
+document.result = ratio
 
 return;
 }
