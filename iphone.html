@@ -1,5 +1,50 @@
-<select>
-<option value="100">選択肢１</option>
-<option value="60">選択肢２</option>
-<option value="100">選択肢３</option>
+<select name="model">
+  <option value="6s">iPhone 6s</option>
+  <option value="6sP">iPhone 6s Plus</option>
+  <option value="7">iPhone 7</option>
+  <option value="7P">iPhone 7 Plus</option>
+  <option value="8">iPhone 8</option>
+  <option value="8P">iPhone 8 Plus</option>
+  <option value="X">iPhone X</option>
+  <option value="XR">iPhone XR</option>
 </select>
+
+<select name="axis">
+  <option value="height">タテ</option>
+  <option value="width">ヨコ</option>
+</select>
+
+<input type="text" name="ratio" size="30"
+value="0 ～ 200 の整数で入力">
+
+
+<!-------- 計算ボタン -------->
+<input type="button" name="myButton" value="計算"
+onclick="setResult()">
+</form>
+<br><br>
+
+<!-------- 表示欄 -------->
+体力は残り<span id="result">***</span>です
+
+
+
+
+<script type="text/javascript">
+
+  /*==== 関数：結果を計算して表示 ====*/
+  function setResult(){
+  
+  /*---- セレクトボックスの値を取得 ----*/
+  var model = document.model;
+  var axis = document.axis;
+  var ratio = document.ratio;
+  
+  /*---- 結果を表示 ----*/
+  document.getElementById("result").innerHTML
+  = 15*15*15;
+  
+  return;
+  }
+  
+</script>
