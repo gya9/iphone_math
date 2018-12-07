@@ -1,29 +1,28 @@
 <form name="form1">
-<select id="model">
-  <option value="6s">iPhone 6s</option>
-  <option value="6sP">iPhone 6s Plus</option>
-  <option value="7">iPhone 7</option>
-  <option value="7P">iPhone 7 Plus</option>
-  <option value="8">iPhone 8</option>
-  <option value="8P">iPhone 8 Plus</option>
-  <option value="X">iPhone X</option>
-  <option value="XR">iPhone XR</option>
-  <option value="XS">iPhone XS</option>
-  <option value="XSM">iPhone XS Max</option>
-</select>
+  <select name="model_chosen">
+    <option value="6s">iPhone 6s</option>
+    <option value="6sP">iPhone 6s Plus</option>
+    <option value="7">iPhone 7</option>
+    <option value="7P">iPhone 7 Plus</option>
+    <option value="8">iPhone 8</option>
+    <option value="8P">iPhone 8 Plus</option>
+    <option value="X">iPhone X</option>
+    <option value="XR">iPhone XR</option>
+    <option value="XS">iPhone XS</option>
+    <option value="XSM">iPhone XS Max</option>
+  </select>
 
-<select id="axis">
-  <option value="height">タテ</option>
-  <option value="width">ヨコ</option>
-</select>
+  <select name="axis_chosen">
+    <option value="height">タテ</option>
+    <option value="width">ヨコ</option>
+  </select>
 
-<input type="text" name="ratio" size="30"
-value="何個分?小数OK">
+  <input type="text" name="ratio" size="30"
+  value="何個分?小数OK">
 </form>
 
 <!-------- 計算ボタン -------->
-<input type="button" name="myButton" value="計算"
-onclick="setResult()">
+<input type="button" name="myButton" value="計算" onclick="setResult()">
 </form>
 <br><br>
 
@@ -37,14 +36,8 @@ onclick="setResult()">
 /*==== 関数：結果を計算して表示 ====*/
 function setResult(){
 
-var model_obj = document.getElementById(model);
-var model_idx = obj.selectedIndex;       //インデックス番号を取得
-var model_val = obj.options[idx].value;  //value値を取得
-
-var axis_obj = document.getElementById(axis);
-var axis_idx = obj.selectedIndex;       //インデックス番号を取得
-var axis_val = obj.options[idx].value;  //value値を取得
-
+var model = document.form1.model_chosen.value;
+var axis = document.form1.axis_chosen.value;
 var ratio = parseFloat(document.ratio.value);
 
 var length = 0;
