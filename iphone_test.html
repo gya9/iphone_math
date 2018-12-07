@@ -1,104 +1,105 @@
 <body>
 
-<!-------- フォーム -------->
-<form name="myForm">
-<!-------- セレクトボックス -------->
-モデル<br>
-<select name="model_chosen">
-  <option value="6s">iPhone 6s</option>
-  <option value="6sP">iPhone 6s Plus</option>
-  <option value="7">iPhone 7</option>
-  <option value="7P">iPhone 7 Plus</option>
-  <option value="8">iPhone 8</option>
-  <option value="8P">iPhone 8 Plus</option>
-  <option value="X">iPhone X</option>
-  <option value="XR">iPhone XR</option>
-  <option value="XS">iPhone XS</option>
-  <option value="XSM">iPhone XS Max</option>
-</select>
-<br><br>
+  <!-------- フォーム -------->
+  <form name="myForm">
+  <!-------- セレクトボックス -------->
+  モデル<br>
+  <select name="model_chosen">
+    <option value="6s">iPhone 6s</option>
+    <option value="6sP">iPhone 6s Plus</option>
+    <option value="7">iPhone 7</option>
+    <option value="7P">iPhone 7 Plus</option>
+    <option value="8">iPhone 8</option>
+    <option value="8P">iPhone 8 Plus</option>
+    <option value="X">iPhone X</option>
+    <option value="XR">iPhone XR</option>
+    <option value="XS">iPhone XS</option>
+    <option value="XSM">iPhone XS Max</option>
+  </select>
+  <br><br>
 
-向き<br>
-<select name="axis_chosen">
-  <option value="height">タテ</option>
-  <option value="width">ヨコ</option>
-</select>
-<br><br>
+  向き<br>
+  <select name="axis_chosen">
+    <option value="height">タテ</option>
+    <option value="width">ヨコ</option>
+  </select>
+  <br><br>
 
-<!-------- テキストボックス -------->
-体力ゲージ（ 0 ～ 200 ）<br>
-<input type="text" name="myText" size="30"
-value="何個分?小数OK">
-<br><br>
+  <!-------- テキストボックス -------->
+  倍率<br>
+  <input type="text" name="myText" size="30"
+  value="何個分?">
+  <br><br>
 
-<!-------- 計算ボタン -------->
-<input type="button" name="myButton" value="計算"
-onclick="setResult()">
-</form>
-<br><br>
+  <!-------- 計算ボタン -------->
+  <input type="button" name="myButton" value="計算"
+  onclick="setResult()">
+  </form>
+  <br><br>
 
-<!-------- 表示欄 -------->
-<!-- 体力は残り<span id="result">***</span>です -->
+  <!-------- 表示欄 -------->
+  <!-- 体力は残り<span id="result">***</span>です -->
 
-体力は残り<span id="model_result">***</span>です<br>
-体力は残り<span id="axis_result">***</span>です<br>
-体力は残り<span id="ratio_result">***</span>です<br>
+  体力は残り<span id="model_result">***</span>です<br>
+  体力は残り<span id="axis_result">***</span>です<br>
+  体力は残り<span id="ratio_result">***</span>です<br>
 
 
 
-<!-------- JavaScript -------->
-<script type="text/javascript">
-
-/*==== 関数：結果を計算して表示 ====*/
-function setResult(){
-
-/*---- セレクトボックスの値を取得 ----*/
-var model_chosen = document.myForm.model_chosen;
-var options = model_chosen.options;
-var model;
-for( var i=0 ; i<options.length ; i++ ){
-  if( options[i].selected ){
-    model = options[i].value;
-  break;
+  <!-------- JavaScript -------->
+  <script type="text/javascript">
+  
+  /*==== 関数：結果を計算して表示 ====*/
+  function setResult(){
+  
+  /*---- セレクトボックスの値を取得 ----*/
+  var model_chosen = document.myForm.model_chosen;
+  var options = model_chosen.options;
+  var model;
+  for( var i=0 ; i<options.length ; i++ ){
+    if( options[i].selected ){
+      model = options[i].value;
+    break;
+    }
   }
-}
-
-/*---- セレクトボックスの値を取得 ----*/
-var axis_chosen = document.myForm.axis_chosen;
-var options = axis_chosen.options;
-var axis;
-for( var i=0 ; i<options.length ; i++ ){
-  if( options[i].selected ){
-    axis = options[i].value;
-  break;
+  
+  /*---- セレクトボックスの値を取得 ----*/
+  var axis_chosen = document.myForm.axis_chosen;
+  var options = axis_chosen.options;
+  var axis;
+  for( var i=0 ; i<options.length ; i++ ){
+    if( options[i].selected ){
+      axis = options[i].value;
+    break;
+    }
   }
-}
-
-/*---- テキストボックスの値を取得 ----*/
-var myText = document.myForm.myText;
-if( myText.value.match(/\D/) ){
-alert("入力は数字にしてください");
-return;
-}
-var ratio = parseFloat(myText.value);
-
-
-/*---- iphoneの長さを決定 ----*/
-var length;
-
-
-/*---- 結果を表示 ----*/
-document.getElementById("model_result").innerHTML
-= model;
-
-document.getElementById("axis_result").innerHTML
-= axis;
-
-document.getElementById("ratio_result").innerHTML
-= ratio;
-return;
-}
-
-</script>
+  
+  /*---- テキストボックスの値を取得 ----*/
+  var myText = document.myForm.myText;
+  if( myText.value.match(/\D/) ){
+    alert("入力は数字にしてください");
+    return;
+  }
+  
+  var ratio = parseFloat(myText.value);
+  
+  
+  /*---- iphoneの長さを決定 ----*/
+  var length;
+  
+  
+  /*---- 結果を表示 ----*/
+  document.getElementById("model_result").innerHTML
+  = model;
+  
+  document.getElementById("axis_result").innerHTML
+  = axis;
+  
+  document.getElementById("ratio_result").innerHTML
+  = ratio;
+  return;
+  }
+  
+  </script>
 
 </body>
