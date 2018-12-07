@@ -1,46 +1,9 @@
-<form name="form1">
-<select name="model">
-  <option value="6s">iPhone 6s</option>
-  <option value="6sP">iPhone 6s Plus</option>
-  <option value="7">iPhone 7</option>
-  <option value="7P">iPhone 7 Plus</option>
-  <option value="8">iPhone 8</option>
-  <option value="8P">iPhone 8 Plus</option>
-  <option value="X">iPhone X</option>
-  <option value="XR">iPhone XR</option>
-  <option value="XS">iPhone XS</option>
-  <option value="XSM">iPhone XS Max</option>
-</select>
 
-<select name="axis">
-  <option value="height">タテ</option>
-  <option value="width">ヨコ</option>
-</select>
-
-<input type="text" name="ratio" size="30"
-value="何個分?小数OK">
-</form>
-
-<!-------- 計算ボタン -------->
-<input type="button" name="myButton" value="計算"
-onclick="setResult()">
-</form>
-<br><br>
-
-<!-------- 表示欄 -------->
-<span id="length">XX</span>cm x
-<span id="ratio">YY</span> = 
-<span id="result">ZZ</span>cm
-
-<script type="text/javascript">
-
-/*==== 関数：結果を計算して表示 ====*/
 function setResult(){
 
-var model_selected = document.getElementsByName("model");
-var model = model_selected.value;
-var axis_selected = document.getElementsByName("axis");
-var axis = axis_selected.value;
+/*---- セレクトボックスの値を取得 ----*/
+var model = document.model.select
+var axis = document.axis.select;
 var ratio = parseFloat(document.ratio.value);
 
 var length = 0;
@@ -79,5 +42,3 @@ document.getElementById("result").innerHTML
 
 return;
 }
-
-</script>
