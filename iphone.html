@@ -27,7 +27,7 @@ onclick="setResult()">
 
 <!-------- 表示欄 -------->
 <span id="length">XX</span>cm x
-<span id="ratio">YY</span>
+<span id="ratio">YY</span> = 
 <span id="result">ZZ</span>cm
 
 <script type="text/javascript">
@@ -36,9 +36,9 @@ onclick="setResult()">
 function setResult(){
 
 /*---- セレクトボックスの値を取得 ----*/
-var model = document.model;
-var axis = document.axis;
-var ratio = parseFloat(document.ratio);
+var model = document.model.select
+var axis = document.axis.select;
+var ratio = parseFloat(document.ratio.value);
 
 var length = 0;
 if (axis == "height") {
