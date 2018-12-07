@@ -1,5 +1,5 @@
 <form name="form1">
-<select name="model">
+<select id="model">
   <option value="6s">iPhone 6s</option>
   <option value="6sP">iPhone 6s Plus</option>
   <option value="7">iPhone 7</option>
@@ -12,7 +12,7 @@
   <option value="XSM">iPhone XS Max</option>
 </select>
 
-<select name="axis">
+<select id="axis">
   <option value="height">タテ</option>
   <option value="width">ヨコ</option>
 </select>
@@ -28,8 +28,8 @@ onclick="setResult()">
 <br><br>
 
 <!-------- 表示欄 -------->
-<span id="length">XX</span>cm x
-<span id="ratio">YY</span> = 
+<!-- <span id="length">XX</span>cm x
+<span id="ratio">YY</span> =  -->
 <span id="result">ZZ</span>cm
 
 <script type="text/javascript">
@@ -37,10 +37,14 @@ onclick="setResult()">
 /*==== 関数：結果を計算して表示 ====*/
 function setResult(){
 
-var model_selected = document.getElementsByName("model");
-var model = model_selected.value;
-var axis_selected = document.getElementsByName("axis");
-var axis = axis_selected.value;
+var model_obj = document.getElementById(model);
+var model_idx = obj.selectedIndex;       //インデックス番号を取得
+var model_val = obj.options[idx].value;  //value値を取得
+
+var axis_obj = document.getElementById(axis);
+var axis_idx = obj.selectedIndex;       //インデックス番号を取得
+var axis_val = obj.options[idx].value;  //value値を取得
+
 var ratio = parseFloat(document.ratio.value);
 
 var length = 0;
@@ -70,10 +74,10 @@ else if (axis == "width") {
 }
 
 /*---- 結果を表示 ----*/
-document.getElementById("length").innerHTML
-= length
-document.getElementById("ratio").innerHTML
-= ratio
+// document.getElementById("length").innerHTML
+// = length
+// document.getElementById("ratio").innerHTML
+// = ratio
 document.getElementById("result").innerHTML
 = length * ratio
 
