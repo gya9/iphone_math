@@ -15,7 +15,7 @@
 </select>
 
 <input type="text" name="ratio" size="30"
-value="0 ～ 200 の整数で入力">
+value="何個分?小数OK">
 
 
 <!-------- 計算ボタン -------->
@@ -25,26 +25,34 @@ onclick="setResult()">
 <br><br>
 
 <!-------- 表示欄 -------->
-体力は残り<span id="result">***</span>です
+<span id="result">***</span>cm
 
 
 
 
 <script type="text/javascript">
 
-  /*==== 関数：結果を計算して表示 ====*/
-  function setResult(){
-  
-  /*---- セレクトボックスの値を取得 ----*/
-  var model = document.model;
-  var axis = document.axis;
-  var ratio = document.ratio;
-  
-  /*---- 結果を表示 ----*/
-  document.getElementById("result").innerHTML
-  = 15*15*15;
-  
-  return;
-  }
-  
+/*==== 関数：結果を計算して表示 ====*/
+function setResult(){
+
+/*---- セレクトボックスの値を取得 ----*/
+var model = document.model;
+var axis = document.axis;
+var ratio = parseFloat(document.ratio);
+
+var length = 0;
+if (axis == "height") {
+  if (model == "6S") {length = 13.83}
+}
+
+
+
+
+/*---- 結果を表示 ----*/
+document.getElementById("result").innerHTML
+= length * ratio
+
+return;
+}
+
 </script>
