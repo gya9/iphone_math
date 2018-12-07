@@ -7,6 +7,8 @@
   <option value="8P">iPhone 8 Plus</option>
   <option value="X">iPhone X</option>
   <option value="XR">iPhone XR</option>
+  <option value="XS">iPhone XS</option>
+  <option value="XSM">iPhone XS Max</option>
 </select>
 
 <select name="axis">
@@ -17,7 +19,6 @@
 <input type="text" name="ratio" size="30"
 value="何個分?小数OK">
 
-
 <!-------- 計算ボタン -------->
 <input type="button" name="myButton" value="計算"
 onclick="setResult()">
@@ -25,10 +26,9 @@ onclick="setResult()">
 <br><br>
 
 <!-------- 表示欄 -------->
-<span id="result">***</span>cm
-
-
-
+<span id="length">XX</span>cm x
+<span id="ratio">YY</span>
+<span id="result">ZZ</span>cm
 
 <script type="text/javascript">
 
@@ -42,13 +42,35 @@ var ratio = parseFloat(document.ratio);
 
 var length = 0;
 if (axis == "height") {
-  if (model == "6S") {length = 13.83}
+  if (model == "6s") {length = 13.83;}
+  else if (model == "6sP") {length = 15.82;}
+  else if (model == "7") {length = 13.83;}
+  else if (model == "7P") {length = 15.82;}
+  else if (model == "8") {length = 13.84;}
+  else if (model == "8P") {length = 15.84;}
+  else if (model == "X") {length = 14.36;}
+  else if (model == "XR") {length = 15.09;}
+  else if (model == "XS") {length = 14.36;}
+  else if (model == "XSM") {length = 15.75;}
+}
+else if (axis == "width") {
+  if (model == "6s") {length = 6.71;}
+  else if (model == "6sP") {length = 7.79;}
+  else if (model == "7") {length = 6.71;}
+  else if (model == "7P") {length = 7.79;}
+  else if (model == "8") {length = 6.73;}
+  else if (model == "8P") {length = 7.81;}
+  else if (model == "X") {length = 7.09;}
+  else if (model == "XR") {length = 7.57;}
+  else if (model == "XS") {length = 7.09;}
+  else if (model == "XSM") {length = 7.74;}
 }
 
-
-
-
 /*---- 結果を表示 ----*/
+document.getElementById("length").innerHTML
+= length
+document.getElementById("ratio").innerHTML
+= ratio
 document.getElementById("result").innerHTML
 = length * ratio
 
