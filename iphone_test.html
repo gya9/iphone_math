@@ -53,7 +53,7 @@
   function setResult(){
   
   /*---- セレクトボックスの値を取得 ----*/
-  var model_chosen = document.myForm.model_chosen;
+  var model_chosen = document.myForm.getElementById("model_chosen");
   var options = model_chosen.options;
   var model;
   for( var i=0 ; i<options.length ; i++ ){
@@ -64,7 +64,7 @@
   }
   
   /*---- セレクトボックスの値を取得 ----*/
-  var axis_chosen = document.myForm.axis_chosen;
+  var axis_chosen = document.myForm.getElementById("axis_result");
   var options = axis_chosen.options;
   var axis;
   for( var i=0 ; i<options.length ; i++ ){
@@ -90,9 +90,9 @@
   
   /*---- 結果を表示 ----*/
   alert(model);
-  document.getElementById("model_result")=model;
-  document.getElementById("axis_result")=axis;
-  document.getElementById("ratio_result")=ratio;
+  document.getElementById("model_result").innerHTML=model;
+  document.getElementById("axis_result").innerHTML=axis;
+  document.getElementById("ratio_result").innerHTML=ratio;
   return;
   }
   
