@@ -53,7 +53,7 @@
   function setResult(){
   
   /*---- セレクトボックスの値を取得 ----*/
-  var model_chosen = document.getElementById("model_chosen");
+  var model_chosen = document.myForm.model_chosen;
   var options = model_chosen.options;
   var model;
   for( var i=0 ; i<options.length ; i++ ){
@@ -64,7 +64,7 @@
   }
   
   /*---- セレクトボックスの値を取得 ----*/
-  var axis_chosen = document.getElementById("axis_result");
+  var axis_chosen = document.myForm.axis_chosen;
   var options = axis_chosen.options;
   var axis;
   for( var i=0 ; i<options.length ; i++ ){
