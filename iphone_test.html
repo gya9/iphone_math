@@ -40,10 +40,9 @@
   <!-------- 表示欄 -------->
   <!-- 体力は残り<span id="result">***</span>です -->
 
-  体力は残り<span id="model_result">***</span>です<br>
-  体力は残り<span id="axis_result">***</span>です<br>
-  体力は残り<span id="ratio_result">***</span>です<br>
-  体力は残り<span id="result">***</span>です<br>
+  <span id="length">***</span> cm x 
+  <span id="ratio">***</span> = 
+  <span id="result">***</span>cm<br>
 
 
 
@@ -113,9 +112,8 @@
   }
   
   /*---- 結果を表示 ----*/
-  document.getElementById("model_result").innerHTML=model;
-  document.getElementById("axis_result").innerHTML=axis;
-  document.getElementById("ratio_result").innerHTML=ratio;
+  document.getElementById("length").innerHTML = length;
+  document.getElementById("ratio").innerHTML = ratio;
   document.getElementById("result").innerHTML = length * ratio;
 
   return;
