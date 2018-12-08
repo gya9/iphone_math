@@ -6,7 +6,7 @@ body {
 .top_wrapper {
     padding: 180px 0 100px 0;
     /* background-image: url(https://prog-8.com/images/html/advanced/top.png); */
-    background-image: "og.png";
+    background-image: url(og.png);
     background-size: cover;
     color: white;
     text-align: center;
