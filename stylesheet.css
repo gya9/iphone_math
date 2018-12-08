@@ -57,7 +57,7 @@ input[type="number"]:hover{
 
 .number_wrapper{
     padding: 5 5;
-    color: black;
+    color: white;
 }
 
 .btn {
@@ -78,7 +78,9 @@ opacity: 1;
 }
 
 .ans_wrapper{
-    margin: 10 250;
+    display: inline-block;
+    height: 100px;
+    width: 300px;
     background-color: rgba(45, 112, 212, 0.7);
     color: black;
     border-radius: 10px;
