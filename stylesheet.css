@@ -5,7 +5,8 @@ body {
 
 .top_wrapper {
     padding: 180px 0 100px 0;
-    background-image: url(https://prog-8.com/images/html/advanced/top.png);
+    /* background-image: url(https://prog-8.com/images/html/advanced/top.png); */
+    background-image: "og.png";
     background-size: cover;
     color: white;
     text-align: center;
@@ -16,19 +17,17 @@ select {
     height:30px;
     width: 150px;
     padding-right: 1em;
+    opacity: 0.95;
     cursor: pointer;
     text-align: center;
-    /* text-indent: 0.01px; */
     text-overflow: ellipsis;
-    /* border-radius: 10px; */
-    /* -moz-appearance: none; */
-    /* border: none; */
     outline: none;
-    /* background: transparent; */
     background-image: none;
-    /* box-shadow: none; */
-    /* -webkit-appearance: none; */
     appearance: none;
+}
+
+select:hover{
+    opacity: 1;
 }
 
 .select_wrapper{
@@ -47,6 +46,10 @@ input[type="number"] {
     background-image: none;
     appearance: none;
     -moz-appearance:textfield;
+}
+
+input[type="number"]:hover{
+    opacity: 1;
 }
 
 .number_wrapper{
