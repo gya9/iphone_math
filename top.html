@@ -7,43 +7,44 @@
   </head>
   <body>
     <div class="top_wrapper">
-      <form name="myForm">
-        <div class="select_wrapper">
-          <select name="model_chosen">
-            <option value="" hidden>モデルを選択</option>
-            <option value="6s">iPhone 6s</option>
-            <option value="6sP">iPhone 6s Plus</option>
-            <option value="7">iPhone 7</option>
-            <option value="7P">iPhone 7 Plus</option>
-            <option value="8">iPhone 8</option>
-            <option value="8P">iPhone 8 Plus</option>
-            <option value="X">iPhone X</option>
-            <option value="XR">iPhone XR</option>
-            <option value="XS">iPhone XS</option>
-            <option value="XSM">iPhone XS Max</option>
-          </select>
+      <div class="bg-mask">
+        <form name="myForm">
+          <div class="select_wrapper">
+            <select name="model_chosen">
+              <option value="" hidden>モデルを選択</option>
+              <option value="6s">iPhone 6s</option>
+              <option value="6sP">iPhone 6s Plus</option>
+              <option value="7">iPhone 7</option>
+              <option value="7P">iPhone 7 Plus</option>
+              <option value="8">iPhone 8</option>
+              <option value="8P">iPhone 8 Plus</option>
+              <option value="X">iPhone X</option>
+              <option value="XR">iPhone XR</option>
+              <option value="XS">iPhone XS</option>
+              <option value="XSM">iPhone XS Max</option>
+            </select>
+          </div>
+          <div class="select_wrapper">
+            <select name="axis_chosen">
+              <option value="" hidden>向きを選択</option>
+              <option value="height">タテ</option>
+              <option value="width">ヨコ</option>
+            </select>
+          </div>
+          <div class="number_wrapper">
+            <input type="number" name="myText" step="0.01"> 個(小数可)
+          </div>
+          <div class="btn_wrapper">
+            <a href="javascript:void(0);" class="btn" onclick="setResult()">計算</a>
+          </div>
+        </form>
+        <div class="ans_wrapper">
+          <h2 class="ans">
+          <span id="length">***</span> cm x 
+          <span id="ratio">***</span> = 
+          <span id="result">***</span>cm<br>
+          </h2>
         </div>
-        <div class="select_wrapper">
-          <select name="axis_chosen">
-            <option value="" hidden>向きを選択</option>
-            <option value="height">タテ</option>
-            <option value="width">ヨコ</option>
-          </select>
-        </div>
-        <div class="number_wrapper">
-          <input type="number" name="myText" step="0.01"> 個(小数可)
-        </div>
-        <div class="btn_wrapper">
-          <a href="javascript:void(0);" class="btn" onclick="setResult()">計算</a>
-        </div>
-      </form>
-
-      <div class="ans_wrapper">
-        <h2>
-        <span id="length">***</span> cm x 
-        <span id="ratio">***</span> = 
-        <span id="result">***</span>cm<br>
-       </h2>
       </div>
     </div>
   </body>
