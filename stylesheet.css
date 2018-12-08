@@ -1,0 +1,13 @@
+.btn {
+    padding: 8px 24px;
+    color: white;
+    display: inline-block;
+    opacity: 0.8;
+    /* border-radiusを4pxに指定してください */
+    border-radius: 4px;
+  }
+  
+  /* btnクラスにhoverしたときのCSSを指定してください */
+  .btn:hover{
+    opacity: 1;
+  }
