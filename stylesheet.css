@@ -5,6 +5,7 @@
     opacity: 0.8;
     /* border-radiusを4pxに指定してください */
     border-radius: 4px;
+    background-color: #239b76;
   }
   
   /* btnクラスにhoverしたときのCSSを指定してください */
